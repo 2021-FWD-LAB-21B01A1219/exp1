@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM VALIDATON</title>
+    
+    <script>
+        
+        function validate(){
+            let uname1=document.getElementById("username");
+            let uname2=document.getElementById("password").value
+            let uname3=document.getElementsByName("gender").value
+            if (uname1.value=""){
+               // alert("enter valid ")
+               uname1.style.border="2px solid red";
+               let x = document.getElementById("ul");
+               x.style.visibility="visible"
+                return false;
+            }
+            else{
+                return true;
+            }
+            if (uname2=""){
+                alert("enter valid ")
+                return false;
+            }
+            else{
+                return true;
+            }
+            if (uname3=""){
+                alert("enter valid ")
+                return false;
+            }
+            else{
+                return true;
+            }
+            
+
+        
+        }
+
+    </script>
+</head>
+<body>
+    <form action="success.html"  onsubmit= "return validate()">
+        <input type="text" name="" id="username">
+        <label for="" id="ul" style="color: red ; visibility:hidden;">invalid</label>
+        <br>
+        <br>
+        <input type="text" name="" id="password">
+        <br>
+        <br>
+        <input type="checkbox" name="" id="check">Agree
+        <br>
+        <br>
+        <input type="radio" name="gender" id="">male
+        <input type="radio" name="gender" id="">female
+
+        <input type="submit" value="submit">
+        
+    </form>
+</body>
+</html>
